@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!-- {% load static from staticfiles %}
+{% load admin_static %} -->
+<head>
+        Helllo!!
+    </head>
+    <body>
+        <h1>Student Data</h1>
+
+
+        {% if data1 %}
+        <ul>
+            <table>
+                <thead>
+                    <th>name</th>
+                    <th>marks</th>
+                </thead>
+                {% for i in data %}
+                <tr>
+                    <th>{{i.name}}</th>
+                    <th>{{i.marks}}</th>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <p>No Student found </p>
+            {%endif%}
+        </ul>
+
+        {% comment %} <img src="{% "static "images/win.jpg" %}" alt=""> {% endcomment %}
+        
+    </body>
+</html>
